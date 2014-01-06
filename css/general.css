@@ -1,0 +1,281 @@
+@charset "UTF-8";
+/* Responsive Setup */
+
+@-moz-viewport{width: device-width; scale: 1;}
+@-ms-viewport{width: device-width; scale: 1;}
+@-o-viewport{width: device-width; scale: 1;}
+@-webkit-viewport{width: device-width; scale: 1;}
+@viewport{width: device-width; scale: 1;}
+
+html{
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-o-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/*CSS Document*/
+
+html, body{
+	width: 100%;
+	font-family: Tahoma, Sathu, Thonburi, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: baseline;
+	text-align: justify;
+	background-color: #F0F0F0;
+}
+
+p{
+	padding-bottom: 20px;
+}
+
+h1{
+	text-align: center;
+	font-family: Helvetica, Tahoma, sans-serif;
+	font-size: 30px;
+	padding: 20px;
+}
+
+h2{
+	text-align: center;
+	font-family: Helvetica, Tahoma, sans-serif;
+	font-size: 20px;
+	padding: 20px;
+}
+	
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+main{
+	width: 90%;
+	margin: 0 auto;
+	/*margin: 0 5%; works too (it will be the remaining 10% from width)*/
+}
+
+img{
+	width: 50%;
+	padding: 40px;
+	border: 1px solid #666;
+	
+}
+
+copyright{
+	padding-top: 5px;
+}
+
+.hide-text{
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+footer{
+	clear: both;	
+}
+
+.nav-btn,
+.nav-btn:link,
+.nav-btn:visited{
+	display: block;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 10px;
+	right: 5%;
+	background: url("http://smit1337.site44.com/dsn1543/exercise-3/images/nav-icon.svg") 50% 50% no-repeat white;
+}
+
+.nav-btn:hover,
+.nav-btn:focus,
+.nav-btn:active{
+	background-color: #CCC;
+}
+
+.nav a,
+.nav a:link,
+.nav a:visited{
+	display: block;
+	background-color: #09C;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	padding: 1rem;
+	border-top: 1px solid #fff;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav a:active{
+	background-color: #333;
+}
+
+/*Toggle Nav CSS*/
+
+.nav-top{
+	display: none;
+}
+
+.nav-top[data-state="expanded"]{
+	display: block;
+}
+
+@media only screen and (min-width: 25em){
+	
+	.nav{
+		overflow: auto;
+	}
+	
+	.nav li{
+		float: left;
+		width: 33.33%;
+	}
+	
+	.nav-btn,
+	.nav-btn:link,
+	.nav-btn:visited{
+		display: none;
+	}
+	
+	.nav-top{
+		display: block;
+	}
+	
+}
+
+@media only screen and (min-width: 35em){
+	
+	.nav{
+		background-color: #09C;
+		text-align: center;
+	}
+	
+	.nav li{
+		display: inline-block;
+		float: none;
+		margin: 0;
+		width: auto;
+	}
+	
+	.nav a,
+	.nav a:link,
+	.nav a:visited{
+		border-top: 0;
+	}
+	
+	.nav-top{
+		float: right;
+		margin-top: 1.5%;
+	}
+	
+	h1{
+		float: left;
+		width: auto;
+	}
+	
+	h2{
+		overflow: auto;
+	}
+	
+}
+
+/* Below relevant for smaller photos and non-tables only 
+
+@media only screen and (min-width: 45em){
+	
+	.home img{
+		float: right;
+		width: 50%;
+		margin: 0 0 2rem 1 rem;
+	}
+	
+	.feature{ /*For "Pool Hours" to be pushed down" *
+		overflow: auto;
+	}
+	
+}
+
+@media only screen and (min-width: 25em){
+	
+	.hours-table{
+		display: table;
+	}
+	
+	.hours-list{
+		display: none;
+	}
+	
+} */
+
+@media only screen and (min-width: 40em){
+	
+	.image-list li{
+		width: 28.33%;
+	}
+	
+}
+
+@media only screen and (min-width: 50em){
+	
+	.image-list li{
+		width: 20%;
+	}
+	
+}
+
+/* For Prices Page, add divs (left for one, right for other) to prices before paragraph explaining 'prices' */
+
+@media only screen and (min-width: 45em){
+	
+	.col{
+		width: 47.5%;
+	}
+	
+	.left{
+		float: left;
+	}
+	
+	.right{
+		float: right;
+	}
+	
+	.prices .main{
+		overflow: inherit;
+	}
+	
+}
+
+@media only screen and (min-width: 75em) {
+	
+	body{
+		max-width: 70em;
+		margin: 0 auto;
+	}	
+
+	header{
+		background-color: rgba(0,0,0,0.3);
+		overflow: auto;
+	}
+	footer{
+		clear: both;
+		/* ^^^^ SUPER IMPORTANT!!! CLEAR FORCES THINGS DOWNNNNN */
+	}
+	
+	.copyright{
+		width: auto;
+		margin: 1rem;
+	}
+	
+}
+
+@media only screen and (min-width: 100em) {
+	
+	
+	
+}
